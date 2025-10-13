@@ -43,11 +43,11 @@ if not (n1 < n2 < n3 < n4 < n5 < n6):    #aqui verificamos se os índices estão
 
 #Se os índices estão dentro do esperado, o programa continua.
 
-CDS1 = DNA[n1 -1 : n2]    #agora vamos atribuir cada parte da sequência a uma variável. Importante lembrar que o primeiro índice da lista é 0, mas o primeiro valor na nossa contagem é igual a 1.
-intron1 = DNA[n2 -1 : n3]
-CDS2 = DNA[n3 -1 : n4]
-intron2 = DNA[n4 -1: n5]
-CDS3 = DNA[n5 -1 : n6]
+CDS1 = DNA[n1 : n2]    #agora vamos atribuir cada parte da sequência a uma variável.
+intron1 = DNA[n2 : n3 -1]
+CDS2 = DNA[n3 : n4]
+intron2 = DNA[n4 : n5 -1]
+CDS3 = DNA[n5 : n6]
 
 val1 = (len(intron1) >= 4) and (intron1.startswith("GT") and intron1.endswith("AG"))   #verificamos se cada íntron tem pelo menos 4 pares de base (o mínimo para cumprir as condições) e se inciam e terminam com os códigos indicados.
 
